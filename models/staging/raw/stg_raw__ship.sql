@@ -4,7 +4,8 @@ with
 
     renamed as (
 
-        select orders_id, shipping_fee, logcost, ship_cost from source
+        select orders_id, shipping_fee, logcost, cast( ship_cost as float64 ) as ship_cost 
+        from source
 
     )
 
