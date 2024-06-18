@@ -12,6 +12,7 @@ sources:
           description: pk
           tests:
             - unique
+            - not_null
     - name: sales
       identifier: raw_gz_sales  
        
@@ -20,4 +21,5 @@ sources:
       tests:
         - unique:
             column_name: "(orders_id)"
-  
+        - not_null:
+            column_name: "(orders_id)"
