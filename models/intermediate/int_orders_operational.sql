@@ -14,9 +14,7 @@ with renamed as(
     using (orders_id)
 )
 
-select orders_id
-       date_date,
+select *,
        round ( margin + shipping_fee - shipping_cost , 2 ) as operational_margin ,
-       revenue,
-       quantity
+      
 from renamed
