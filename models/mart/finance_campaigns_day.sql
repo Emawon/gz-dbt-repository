@@ -1,5 +1,6 @@
 select date_date
        ,revenue
+       ,avg_basket
        ,margin
        ,operational_margin
        ,ads_cost
