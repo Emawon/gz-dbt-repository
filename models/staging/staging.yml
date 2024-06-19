@@ -5,3 +5,13 @@ models:
     tests:
       - unique:
           column_name: "(pk)"
+  - name: int_campaigns
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - date_date
+            - campaign_key
+  - name: int_campaigns_day
+    tests:
+     - unique:
+         column_name: date_date
